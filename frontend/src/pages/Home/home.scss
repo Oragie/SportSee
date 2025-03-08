@@ -1,0 +1,30 @@
+@use './../../style/variables.scss';
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: variables.$default-nav-background-color;
+    height: 100vh;
+    // width: 100%;
+    // width: calc(100% - variables.$sidebar-width);
+}
+
+.home-logo {
+    width: 300px;
+    height: 137px;
+    margin-bottom: variables.$home-logo-margin-bottom; 
+}
+
+.user-link {
+    text-decoration: none;
+    color: variables.$nav-title-color;
+}
+
+.toggle-mock {
+    color: variables.$nav-title-color;
+    margin-top: variables.$toggle-mock-margin-top; 
+    width: 200px;
+    text-align: center;
+}
