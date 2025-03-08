@@ -1,0 +1,46 @@
+@use './../../style/variables.scss';
+
+.header {
+    background-color: variables.$default-nav-background-color;
+    color: variables.$nav-title-color;
+    height: variables.$header-height;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    gap: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    z-index: 10;
+}
+
+.header-logo {
+    width: 178px;
+    margin-left: 28px;
+    display: block;
+}
+
+.nav-header {
+    width: 100%;
+    margin-right: 20px;
+}
+
+.nav-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: variables.$nav-title-color;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
