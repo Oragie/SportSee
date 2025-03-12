@@ -1,15 +1,14 @@
 @use './../../style/variable.scss';
 
-.error {
-    background-color: variables.$defaultNavBackgroundColor;
-    height: 100vh;
+.errorUser {
+    background-color: variables.$defaultBackgroundColor;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.message404 {
+.message404User {
     font-size: 18px;
     font-weight: 500;
     text-align: center;
@@ -17,11 +16,11 @@
     margin: 0px 20px;
 }
 
-.backHome {
+.backHomeUser {
     font-size: 14px;
     font-weight: 500;
     text-align: center;
     margin: 110px 20px 0px;
     text-decoration: underline;
-    color: variables.$navTitleColor;
+    color: variables.$defaultFontColor;
 }
