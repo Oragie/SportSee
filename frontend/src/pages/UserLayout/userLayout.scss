@@ -1,8 +1,8 @@
-@use './../../style/variable.scss';
+@use './../../style/variable.scss' as variables;
 
 .main-container {
     display: flex;
-    height: calc(100vh - variables.$headerHeight);
+    height: calc(100vh - variables.$header-height);
     overflow: hidden;
 }
 

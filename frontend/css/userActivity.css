@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.userActivity {
+  grid-area: 1/1/2/4;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+}
+
+.userActivity h2 {
+  position: absolute;
+  top: 29px;
+  left: 32px;
+  color: #20253A;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.userActivity .recharts-bar-rectangle:hover {
+  /* Curseur de main survolant les barres */
+  background-color: red !important;
+  /* Couleur de fond lors du survol */
+}
+
+.recharts-bar-rectangles {
+  background-color: red !important;
+}
+
+.recharts-legend-item-text {
+  color: #74798C !important;
+}
+
+.recharts-surface {
+  margin-right: 10px !important;
+  width: 8px;
+  height: 8px;
+}
+
+.recharts-legend-wrapper {
+  padding-bottom: 85px;
+}
+
+@media (max-width: 1340px) {
+  .recharts-legend-wrapper {
+    padding-bottom: 55px;
+  }
+}/*# sourceMappingURL=userActivity.css.map */

@@ -3,7 +3,7 @@
  * @description Composant React affichant un tooltip personnalisé en fonction du type de données pour un graphique.
  */
 
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 /**
  * Composant personnalisé pour l'affichage d'un tooltip dans un graphique.
@@ -16,37 +16,54 @@ import PropTypes from 'prop-types';
  * @returns {JSX.Element|null} Le tooltip avec le contenu correspondant au type de données, ou `null` si aucune donnée active n'est présente.
  */
 function CustomTooltip({ active, payload, type }) {
+  if (active && payload && payload.length) {
+    switch (type) {
+      case "activity":
+        return (
+          <div
+            style={{ color: "#FFFFFF", textAlign: "center", fontWeight: "400" }}
+          >
+            <p
+              style={{ backgroundColor: "#000000", padding: "15px 10px" }}
+            >{`${payload[0].value} kg`}</p>
+            <p
+              style={{ backgroundColor: "#E60000", padding: "15px 10px" }}
+            >{`${payload[1].value} kCal`}</p>
+          </div>
+        );
 
-    if (active && payload && payload.length) {
-        switch (type) {
-            case 'activity':
-                return (
-                    <div style={{ backgroundColor: "#E60000", color: "#FFFFFF", textAlign: "center", fontWeight: "400" }}>
-                        <p style={{ padding: "15px 10px" }}>{`${payload[0].value} kg`}</p>
-                        <p style={{ padding: "15px 10px" }}>{`${payload[1].value} kCal`}</p>
-                    </div>
-                );
+      case "averageSessions":
+        return (
+          <div
+            style={{
+              backgroundColor: "#FBFBFB",
+              padding: "10px",
+              textAlign: "center",
+            }}
+          >
+            <p style={{ color: "#000000" }}>{`${payload[0].value - 20} min`}</p>
+          </div>
+        );
 
-            case 'averageSessions':
-                return (
-                    <div style={{ backgroundColor: "#FBFBFB", padding: "10px", textAlign: "center" }}>
-                        <p style={{ color: "#000000" }}>{`${payload[0].value - 20} min`}</p>
-                    </div>
-                );
+      case "performance":
+        return (
+          <div
+            style={{
+              backgroundColor: "#FBFBFB",
+              padding: "10px",
+              textAlign: "center",
+            }}
+          >
+            <p style={{ color: "#000000" }}>{`${payload[0].value} points`}</p>
+          </div>
+        );
 
-            case 'performance':
-                return (
-                    <div style={{ backgroundColor: "#FBFBFB", padding: "10px", textAlign: "center" }}>
-                        <p style={{ color: "#000000" }}>{`${payload[0].value} points`}</p>
-                    </div>
-                );
-
-            default:
-                return null;
-        }
+      default:
+        return null;
     }
+  }
 
-    return null;
+  return null;
 }
 
 /**
@@ -57,9 +74,9 @@ function CustomTooltip({ active, payload, type }) {
  * @property {string} type - Type de données à afficher (par exemple, 'activity', 'averageSessions', 'performance').
  */
 CustomTooltip.propTypes = {
-    active: PropTypes.bool,
-    payload: PropTypes.array,
-    type: PropTypes.string,
+  active: PropTypes.bool,
+  payload: PropTypes.array,
+  type: PropTypes.string,
 };
 
 export default CustomTooltip;

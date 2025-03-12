@@ -1,8 +1,8 @@
-@use './../../style/variable.scss';
+@use './../../style/variable.scss' as variables;
 
 .userAverage {
     grid-area: 2 / 1 / 3 / 2;
-    background-color: variables.$secondaryBackgroundColor;
+    background-color: variables.$secondary-background-color;
     border-radius: 5px;
     overflow: hidden;
     font-size: 12px;
@@ -15,7 +15,7 @@
     position: absolute;
     top: 29px;
     left: 34px;
-    color: variables.$navTitleColor;
+    color: variables.$nav-title-color;
     font-size: 15px;
     font-weight: 500;
     width: 147px;

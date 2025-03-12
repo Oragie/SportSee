@@ -1,4 +1,4 @@
-@use './../../style/variable.scss';
+@use './../../style/variable.scss' as variables;
 
 .dashboard {
     display: flex;
@@ -19,7 +19,7 @@ h1 {
 }
 
 h1 span {
-    color: variables.$mainColor;
+    color: variables.$main-color;
 }
 
 .contentHeader p {

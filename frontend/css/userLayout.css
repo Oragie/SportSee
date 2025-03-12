@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.main-container {
+  display: flex;
+  height: calc(100vh - 91px);
+  overflow: hidden;
+}
+
+.content-routes {
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: grid;
+  width: 100%;
+  padding: 6vh 7vw 6vh 7vw;
+  transition: padding 0.3s ease-in-out;
+}
+
+@media (max-width: 1340px) {
+  .content-routes {
+    padding: 1vh 1vw 1vh 1vw;
+  }
+}/*# sourceMappingURL=userLayout.css.map */

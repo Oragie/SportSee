@@ -1,8 +1,8 @@
-@use './../../style/variable.scss';
+@use './../../style/variable.scss' as variables;
 
 .userPerformance {
     grid-area: 2 / 2 / 3 / 3;
-    background-color: variables.$secondaryBackgroundColor;
+    background-color: variables.$secondary-background-color;
     border-radius: 5px;
     overflow: hidden;
     font-size: 12px;

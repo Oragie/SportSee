@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.userPerformance {
+  grid-area: 2/2/3/3;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  overflow: hidden;
+  font-size: 12px;
+  font-weight: 500;
+  min-width: 200px;
+}
+
+@media (max-width: 1100px) {
+  .recharts-polar-angle-axis-ticks {
+    transform: scale(0.96) translateY(5px);
+    transform-origin: center;
+  }
+}/*# sourceMappingURL=userPerformance.css.map */

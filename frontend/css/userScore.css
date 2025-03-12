@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+.userScore {
+  grid-area: 2/3/3/4;
+  background-color: #FBFBFB;
+  border-radius: 5px;
+  position: relative;
+  min-width: 200px;
+}
+
+.userScore h2 {
+  position: absolute;
+  font-size: 15px;
+  font-weight: 500;
+  top: 25px;
+  left: 30px;
+}
+
+.scoreResult {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.scoreResult .score {
+  font-size: 26px;
+  font-weight: 700;
+  color: #282D30;
+}
+
+.scoreResult p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #74798C;
+  margin-top: 5px;
+}
+
+@media (max-width: 1340px) {
+  .userScore h2 {
+    top: 15px;
+    left: 20px;
+  }
+}/*# sourceMappingURL=userScore.css.map */
