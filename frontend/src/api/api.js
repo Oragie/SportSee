@@ -6,7 +6,7 @@ const USE_MOCK_DATA = import.meta.env.VITE_USE_MOCK_DATA === "true";
 // Fonction pour récupérer les données mockées
 const getMockData = (url, userId) => {
   switch (url) {
-    case "user": // Renommé pour plus de clarté
+    case "user":
       return mockDatas.USER_MAIN_DATA.find((data) => data.id === userId);
     case "activity":
       return mockDatas.USER_ACTIVITY.find((data) => data.userId === userId);
@@ -48,7 +48,7 @@ const fetchData = async (url, userId) => {
     }
 
     const data = await response.json();
-    return data?.data || null; // Assure un retour structuré et évite les erreurs
+    return data?.data; // Assure un retour structuré et évite les erreurs
   } catch (error) {
     console.error("🚨 Erreur lors de la récupération des données :", error);
     throw error;
@@ -56,7 +56,7 @@ const fetchData = async (url, userId) => {
 };
 
 // Fonctions d'accès aux différentes données
-export const fetchUserInfo = (id) => fetchData("user", id);
+export const fetchUserInfo = (id) => fetchData("", id);
 export const fetchUserActivity = (id) => fetchData("activity", id);
 export const fetchUserAverageSessions = (id) =>
   fetchData("average-sessions", id);
