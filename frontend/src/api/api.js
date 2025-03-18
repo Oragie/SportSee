@@ -56,7 +56,9 @@ const fetchData = async (url, userId) => {
 };
 
 // Fonctions d'accès aux différentes données
-export const fetchUserInfo = (id) => fetchData("", id);
+export const fetchUserInfo = USE_MOCK_DATA
+  ? (id) => fetchData("user", id)
+  : (id) => fetchData("", id);
 export const fetchUserActivity = (id) => fetchData("activity", id);
 export const fetchUserAverageSessions = (id) =>
   fetchData("average-sessions", id);
