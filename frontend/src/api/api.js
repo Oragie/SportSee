@@ -35,7 +35,7 @@ const fetchData = async (url, userId) => {
       console.warn(
         `⚠️ Données mockées introuvables pour '${url}' avec userId: ${userId}`
       );
-      return null; // Retourne `null` pour éviter une erreur plus tard
+      return null;
     }
     return mockData;
   }
@@ -48,7 +48,7 @@ const fetchData = async (url, userId) => {
     }
 
     const data = await response.json();
-    return data?.data; // Assure un retour structuré et évite les erreurs
+    return data?.data;
   } catch (error) {
     console.error("🚨 Erreur lors de la récupération des données :", error);
     throw error;
